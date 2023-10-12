@@ -1,14 +1,10 @@
-import React , {lazy, useEffect, useState} from 'react';
+import React , {lazy} from 'react';
 import './App.css';
 import {Header }from "./components/Header.js";
 import Body from "./components/Body.js";
 import About from './components/About';
 import Contact from './components/Contact';
 import {Outlet} from "react-router-dom";
-import UserContext from './utils/UserContext';
-import { Provider } from "react-redux";
-import appStore from './utils/appStore';
-
 
 
 // import Grocery from './components/Grocery';
@@ -46,29 +42,10 @@ const AppLayout=()=>{
   // Header-- it will be a new component.
   // Body
   // Footer
-
-  const[ userName , setUserName]= useState();
-
-  // authentication
-      useEffect(()=>{
-        // Make an API call and send username and password 
-
-        const data={
-          name:"Shivangi",
-        };
-        setUserName(data.name);
-      },[]);
-
-
   return(
-
-    // <UserContext.Provider value={{loggedInUser:userName }}>
-    // <div className="app">
-      <Provider store={appStore}>
-      <UserContext.Provider value={{loggedInUser:userName }}>
+    <div className="app">
+      
       <Header/>
-
-      </UserContext.Provider>
     {/* this outlet is a component whenever there is a change in the path so this outlet will be filled
         with the childeren according to the path. on what page we are */}
         {/* according to routes it will render */}
@@ -101,10 +78,7 @@ const AppLayout=()=>{
     website will not reload your browser will not reload your website, browser will not make external call
     or something this is known a singl page application  */}
 
-</Provider>
-    // </div>
-
-    //  </UserContext.Provider> 
+    </div>
   )
 }
 

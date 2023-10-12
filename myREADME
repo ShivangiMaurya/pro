@@ -1,0 +1,25 @@
+
+
+// 1)---   Default Export/Import
+
+// export default Component;
+// import Component from "path";
+
+// ###############################################################
+
+
+// 2)---   Named Export/import
+
+// export const Component;
+// import {Component} from "path";
+
+// *****when you have to export maultiple thing use named export 
+// ***** just create a new file for a new component follow this convention 
+// *** our ui is config driven is depended upon data
+
+
+
+
+
+
+
