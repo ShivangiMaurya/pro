@@ -45,6 +45,7 @@ import ResMenu from './components/ResMenu';
 // import Grocery from './components/Grocery';
 
 import Cart from './components/Cart';
+import Front from './components/Front';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -107,6 +108,12 @@ const appRouter=createBrowserRouter([
       {
         path:"/cart",
         element: <Cart/>
+      },
+
+      {
+        
+        path:"/front",
+        element: <Front/>
       }
 
     ],

@@ -1,21 +1,26 @@
 
+
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Skeleton } from '@mui/material';
 const Shimmer=()=>{
     return(
         <div className="shimmer-container">
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
+            {/* <LinkedInIcon/> */}
+            {/* <Skeleton variant="rectangular" width={210} height={118}/> */}
+            <div className="shimmer-card">  </div>
+            <div className="shimmer-card">  </div>
+            <div className="shimmer-card">  </div>
+            <div className="shimmer-card">  </div>
+            <div className="shimmer-card"> </div>
+            <div className="shimmer-card"> </div>
 
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
+            <div className="shimmer-card">  </div>
+            <div className="shimmer-card">  </div>
+            <div className="shimmer-card"> </div>
 
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
-            <div className="shimmer-card"> Cards </div>
+            <div className="shimmer-card"> </div>
+            <div className="shimmer-card"> </div>
+            <div className="shimmer-card"> </div>
         </div>
     )
 }

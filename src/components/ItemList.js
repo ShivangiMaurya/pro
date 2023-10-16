@@ -48,7 +48,15 @@ const ItemList=({items,dummy})=>{
            {
             items.map((item)=>(
             //    {console.log(items,"Items DATA!!!!!!!!!!!111")}
-                <div style={{border:"2px solid black",margin:"10px"}} 
+                <div style={{
+                    border:"2px solid black",
+                    margin:"5%",
+                    display:"flex",
+                    // alignItems:"sp"
+                    backgroundColor:"lightgrey",
+                    justifyContent:"space-around"
+                
+                }} 
                 key={item?.card?.info?.name}
                 
                 >
@@ -58,21 +66,7 @@ const ItemList=({items,dummy})=>{
                    src={CDN_URL + item?.card?.info?.imageId}/>
 
 
-                   <button 
-                   style={{
-                    padding:"10px", 
-                    position:"absolute",
-                    marginTop:"60px",
-                    marginLeft:"60px"
-                    }}
-                     
-                //    onClick={handleAddItem(item)}
-                // onClick={()=> handleAddItem(item.card.info.name)}
-                   
-
-                onClick={()=> handleAddItem(item)}
-                    > ADD + +</button>
-                                     
+               
                     <div key={item?.card?.info.id}>
 
                         {/* <button>ADD</button> */}
@@ -94,7 +88,36 @@ const ItemList=({items,dummy})=>{
                           
                     </div>
 
-                    <p style={{fontStyle:"italic",color:"white"}}>{item?.card?.info?.description}</p>
+                    <p style={{fontStyle:"italic",color:"black"}}>{item?.card?.info?.description}</p>
+
+
+                    <button 
+                //    style={{
+                //     padding:"10px", 
+                //     position:"absolute",
+                //     marginTop:"60px",
+                //     marginLeft:"60px"
+                //     }}
+
+                style={{
+                    padding:"3px",
+                    backgroundColor:"green",
+                    padding: "11px 35px",
+                    textAlign:"center",
+                    borderRadius:"5px",
+                    // background-color: #04AA6D;
+                    color: "lightgrey",
+                    height:"50%",
+                    marginTop:"5%"
+                
+                }}
+                     
+                //    onClick={handleAddItem(item)}
+                // onClick={()=> handleAddItem(item.card.info.name)}
+                   
+
+                onClick={()=> handleAddItem(item)}
+                    > ADD++</button>
                 </div>
             ))
            }

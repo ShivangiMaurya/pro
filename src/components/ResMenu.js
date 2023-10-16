@@ -71,7 +71,14 @@ const ResMenu=()=>{
 // console.log(products?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards[0]?.card?.info, "Products");
     
  return(
-        <div style={{textAlign:"center"}}>
+        <div 
+        style={{textAlign:"center",
+        backgroundColor:"red",
+        backgroundImage: `url("https://i.pinimg.com/1200x/03/d9/d1/03d9d18c3531291c21d864bf8ebdd9fe.jpg")`
+
+
+        }}>
+            {/* kkkjjjj */}
             <h1>{name}</h1>
             <h1>{cuisines}</h1>
 
@@ -88,6 +95,7 @@ const ResMenu=()=>{
                 // <div>
                 //       {console.log(index,"CL!!!!!!!!")}
             <RestaurantCategory 
+            
             key={category?.card?.card?.title}
             data={category?.card?.card}
             // showItems={index===1 && true}

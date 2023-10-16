@@ -6,6 +6,9 @@ import {useEffect, useState} from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import Front from "./Front";
+import PizzaComp from "./PizzaComp";
+import ResImage from "./ResImage";
 
 const Body=()=>{
 //  state variable
@@ -80,11 +83,28 @@ const[searchText,setSearchText]=useState("f");
     return listOfRestaurants.length===0?<Shimmer/>:
     (
       <div className="body">
+        {/* <Front/> */}
+        <ResImage/>
+        {/* <PizzaComp/> */}
           {/* {console.log("ret")} */}
 
 
-       <div className="filter">
-        <div className="search">
+          {/* <div className="filter"> */}
+        {/* <div className="search"> */}
+
+       <div style={{
+        // display:"inline-block",
+      //  border:"2px solid black",
+       marginLeft:"30%",
+       marginTop:"2%",
+       marginBottom:"3%",
+       padding:"20px"
+       
+       }}>
+        <div style={{
+          // padding:"5px", 
+        // justifyContent:"center",
+        alignItems:"center"}}>
 
           <input type="text" 
           className="search-box" 
@@ -94,7 +114,27 @@ const[searchText,setSearchText]=useState("f");
           }}
           
           />
+
+
           <button
+
+// #bdb7b7
+             style={{
+              padding:"3px",
+              backgroundColor:"green",
+              padding: "11px 35px",
+              textAlign:"center",
+              borderRadius:"5px",
+              // background-color: #04AA6D;
+              color: "lightgrey",
+              // padding: 12px 20px;
+              // border: none;
+              // border-radius: 4px;
+              // cursor: pointer;
+              // float: right;
+             }}
+
+
           onClick={()=>{
             console.log(searchText);
 
@@ -127,8 +167,11 @@ const[searchText,setSearchText]=useState("f");
   {
    filteredRestaurant.map((restaurantObj,index)=>
     (
-          <div  key={restaurantObj.info.id}>
-       <Link to={"/restaurants/" + restaurantObj.info.id }>
+          <div
+          // style={{backgroundColor:"black"}}
+          
+          key={restaurantObj.info.id}>
+       <Link style={{ textDecoration: 'none' }} to={"/restaurants/" + restaurantObj.info.id }>
 
         {/* If the restaurant is promoted then add a promoted label to it === IN AKSHY CASE */}
 

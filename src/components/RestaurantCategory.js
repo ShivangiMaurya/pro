@@ -55,8 +55,10 @@ const RestaurantCategory=({data , showItems , setShowIndex , dummy})=>{
     // console.log(data?.itemCards[0]?.card?.info?.id,"item!!!!!!!!!")
     return(
      // I want to map my all the category and for each category return a { <RestaurantCategory/> Component!!}
-          <div>
-        <div style={{backgroundColor:"red",
+          <div >
+        <div style={{
+          // backgroundColor:"red",
+        backgroundColor:"lightgrey",
         width:"60%",
         marginLeft:"20%",
 

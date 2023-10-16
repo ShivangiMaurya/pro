@@ -8,6 +8,9 @@ import UserContext from "../utils/UserContext";
 
 import { useSelector } from "react-redux";
 
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CancelIcon from '@mui/icons-material/Cancel';
+
 export const Header=()=>{
     // Header will have -- Logo and Nav Items
     const[btnNameReact,setBtnNameReact]=useState("login");
@@ -72,7 +75,7 @@ export const Header=()=>{
       {/* <div style={{display:"flex"}}> */}
   
       <div className="logo-container">
-        <img style={{height:"90px",width:"140px"}}
+        <img style={{height:"100px",width:"100px"}}
          alt="img" 
          src={LOGO_URL}/>
       </div>
@@ -81,12 +84,46 @@ export const Header=()=>{
         {/* nav items is list of some items */}
         <ul>
 
-          <li>Status :-</li>
-         {onlineStatus ? <li> yes!!!! </li>:<li> No!!!!! </li>}
+          <li style={{color:"darkgrey"}}>Status:-</li>
+         {onlineStatus ? <li  style={{color:"darkgrey"}}><CheckCircleIcon style={{color:"green"}}/></li>:<li  style={{color:"darkgrey"}}> <CancelIcon style={{color:"red"}}/> </li>}
+
+         {/* %%%%%*/}
+
+        <li style={{listStyle:"none",textDecoration:"none"}}>
+          {/* <Link 
+          style={{
+            textDecoration:"none",
+            color:"darkgrey"
+        }}
+          
+          to="/front"> front</Link> */}
+
+<Link 
+          style={{
+            textDecoration:"none",
+            color:"darkgrey"
+        }}
+          
+          to="/front"> Home</Link>
+        </li>
+
+         {/* %%%%%%% */}
           
         <li>
 
-        <Link to="/">Home</Link>
+        {/* <Link 
+         style={{
+          textDecoration:"none",
+          color:"darkgrey"
+      }}
+        to="/">Home</Link> */}
+
+<Link 
+         style={{
+          textDecoration:"none",
+          color:"darkgrey"
+      }}
+        to="/">Menu</Link>
          
         </li>
 
@@ -98,25 +135,60 @@ export const Header=()=>{
 
         <li >
             {/* <a href="/about">About Us</a> */}
-            <Link to="/about">About Us</Link>
+            <Link
+             style={{
+              textDecoration:"none",
+              color:"darkgrey"
+          }}
+             to="/about">About Us</Link>
   
         </li>
 
         <li>
-              <Link to="/contact">Contact Us</Link>
+              <Link 
+               style={{
+                textDecoration:"none",
+                color:"darkgrey"
+            }}
+              to="/contact">Contact Us</Link>
         </li>
 
         <li>
-              <Link to="/grocery"> Grocery</Link>
+              <Link 
+               style={{
+                textDecoration:"none",
+                color:"darkgrey"
+            }}
+              
+              to="/grocery"> Grocery</Link>
         </li>
 
 
         <li>
-        <Link to="/cart"> Cart == ( {cartItems.length} items )  </Link>
+        <Link 
+         style={{
+          textDecoration:"none",
+          color:"darkgrey"
+      }}
+        
+        to="/cart"> Cart ( {cartItems.length} items )  </Link>
           {/* Cart == ( {cartItems.length} items ) */}
           
           </li>
-        <button className="login"
+        <button 
+        // className="login"
+        style={{
+          padding:"3px",
+          backgroundColor:"green",
+          padding: "11px 35px",
+          textAlign:"center",
+          borderRadius:"5px",
+          // background-color: #04AA6D;
+          color: "lightgrey",
+          marginTop:"0.5%",
+          marginBottom:"0.5%"
+          // marginLeft:"45%"
+        }}
         
         onClick={()=>{
          btnNameReact==="login"?
@@ -127,7 +199,8 @@ export const Header=()=>{
 
 
         <li style={{fontFamily:"monospace",
-                    border:"2px solid violet"}}>{loggedInUser}</li>
+        color:"darkgrey",
+                    border:"1px solid green"}}>{loggedInUser}</li>
         </ul>
   
       </div>

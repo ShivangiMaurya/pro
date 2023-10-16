@@ -8,10 +8,16 @@ import {Outlet} from "react-router-dom";
 import UserContext from './utils/UserContext';
 import { Provider } from "react-redux";
 import appStore from './utils/appStore';
+import Footer from './components/Footer';
 
 
-
+// {
+//   /* The following line can be included in your src/index.js or App.js file */
+// }
+// import 'bootstrap/dist/css/bootstrap.min.css';
 // import Grocery from './components/Grocery';
+
+
 
 // we will not import our grocery like this, we will get our [ Grocery] into our app by using something known as
 // "lazy" , we will load it by something known as lazy
@@ -101,6 +107,8 @@ const AppLayout=()=>{
     website will not reload your browser will not reload your website, browser will not make external call
     or something this is known a singl page application  */}
 
+
+<Footer/>
 </Provider>
     // </div>
 
